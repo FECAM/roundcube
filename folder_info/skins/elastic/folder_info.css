@@ -1,0 +1,27 @@
+/**
+ * Folder Info plugin styles
+ */
+
+.folder_info {
+  display: none;
+}
+
+.folder_info span {
+  display: block;
+  font-size:smaller;
+  text-align: center;
+  background-color: #ff511a;
+  padding: 2px;
+}
+
+.folder_info span p {
+  margin: 0;
+}
+
+.folder_info span p + p {
+  margin-top: .5rem;
+}
+
+#rcmfd_folder_info_message {
+  font-family: monospace;
+}
