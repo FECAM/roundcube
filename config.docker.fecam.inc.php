@@ -16,20 +16,20 @@
  );
  
  $config['language'] = 'pt_BR';
- $config['password_driver'] = 'sql';
- $config['password_confirm_current'] = true;
- $config['password_minimum_length'] = 5;
- $config['password_require_nonalpha'] = true;
- $config['password_log'] = true;
- $config['password_algorithm'] = 'dovecot';
- $config['password_dovecotpw'] = '/usr/bin/doveadm pw';
- $config['password_dovecotpw_method'] = 'CRAM-MD5';
- $config['password_dovecotpw_with_method'] = true;
- $config['password_db_dsn'] = '%ROUNDCUBEMAIL_PASSWORD_DB_DSN';
- $config['password_query'] = 'UPDATE mailbox SET password=%P WHERE username=%u LIMIT 1'; 
+ #$config['password_driver'] = 'sql';
+ #$config['password_confirm_current'] = true;
+ #$config['password_minimum_length'] = 5;
+ #$config['password_require_nonalpha'] = true;
+ #$config['password_log'] = true;
+ #$config['password_algorithm'] = 'dovecot';
+ #$config['password_dovecotpw'] = '/usr/bin/doveadm pw';
+ #$config['password_dovecotpw_method'] = 'CRAM-MD5';
+ #$config['password_dovecotpw_with_method'] = true;
+ #$config['password_db_dsn'] = '%ROUNDCUBEMAIL_PASSWORD_DB_DSN';
+ #$config['password_query'] = 'UPDATE mailbox SET password=%P WHERE username=%u LIMIT 1'; 
  $config['debug_level'] = 2;
  $config['sql_debug'] = false;
- $config['product_name'] = 'CIGA Webmail';
+ $config['product_name'] = 'Fecam Webmail';
  $config['folder_info_messages'] = array(
    'Folder 1' => 'Messages will be deleted after {} {}.',
    'InBox' => 'Messages will be deleted after {} days.'
