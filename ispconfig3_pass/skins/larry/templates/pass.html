@@ -1,0 +1,21 @@
+<roundcube:object name="doctype" value="html5" />
+<html>
+<head>
+    <title><roundcube:object name="pagetitle" /></title>
+    <roundcube:include file="/includes/links.html" />
+</head>
+<body class="iframe">
+<h1 class="boxtitle">
+    <roundcube:object name="sectionname_pass" />
+</h1>
+<div id="prefs-details" class="boxcontent">
+    <roundcube:object name="pass_form" id="pass_form" class="propform" />
+</div>
+<div id="formfooter">
+    <div class="footerleft formbuttons">
+        <roundcube:button command="plugin.ispconfig3_pass.save" type="input" class="button mainaction" label="save" />
+    </div>
+</div>
+<roundcube:include file="/includes/footer.html" />
+</body>
+</html>

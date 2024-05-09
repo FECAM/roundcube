@@ -2,6 +2,9 @@
 FROM roundcube/roundcubemail:1.6.6-apache
 ADD config.docker.fecam.inc.php /usr/src/roundcubemail/config/
 ADD folder_info /usr/src/roundcubemail/plugins/folder_info/
+ADD ispconfig3_account /usr/src/roundcubemail/plugins/ispconfig3_account/
+ADD ispconfig3_pass /usr/src/roundcubemail/plugins/ispconfig3_pass/
+
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY logo.svg /usr/src/roundcubemail/skins/elastic/images/logo.svg
 COPY logo.png /usr/src/roundcubemail/skins/elastic/images/favicon.ico
