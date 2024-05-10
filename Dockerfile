@@ -32,6 +32,7 @@ RUN   php /tmp/go-pear.phar
 #RUN       pear install Net_Sieve-1.4.6
 #RUN       pear install --alldeps horde/Horde_ManageSieve
 RUN curl -sSL https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions -o - | sh -s \
-      gd xdebug        
+      gd xdebug  soap       
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+
     
