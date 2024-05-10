@@ -27,15 +27,15 @@ RUN set -ex; \
     ; \
     rm -rf /var/lib/apt/lists/*
     
-#COPY  install-pear.sh /install-pear.sh
-#RUN	  expect -f "/install-pear.sh"  
 RUN   wget -O /tmp/go-pear.phar http://pear.php.net/go-pear.phar
 RUN   php /tmp/go-pear.phar 
-#RUN	  adduser www-data ssl-cert && \
-#        chmod g+r  /etc/ssl -R && \
-#        echo "auth_mechanisms = cram-md5" >>  /etc/dovecot/conf.d/10-auth.conf && \
-#        chgrp ssl-cert /etc/dovecot/private -R && \
-#        chmod g+rx /etc/dovecot/private -R && \
- RUN       pear install Net_Sieve-1.4.6
-        
+#RUN       pear install Net_Sieve-1.4.6
+#RUN       pear install --alldeps horde/Horde_ManageSieve
+
+
+FROM php:8.1.27-zts-bookworm
+RUN curl -sSL https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions -o - | sh -s \
+      gd xdebug        
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+RUN install-php-extensions soap
     
