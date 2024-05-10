@@ -8,6 +8,8 @@ ADD ispconfig3_pass /usr/src/roundcubemail/plugins/ispconfig3_pass/
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY logo.svg /usr/src/roundcubemail/skins/elastic/images/logo.svg
 COPY logo.png /usr/src/roundcubemail/skins/elastic/images/favicon.ico
+COPY php8.2-soap_8.2.18-1~deb12u1_mipsel.deb /php8.2-soap_8.2.18-1~deb12u1_mipsel.deb
+
 RUN set -ex; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
@@ -34,6 +36,6 @@ RUN   php /tmp/go-pear.phar
 #        echo "auth_mechanisms = cram-md5" >>  /etc/dovecot/conf.d/10-auth.conf && \
 #        chgrp ssl-cert /etc/dovecot/private -R && \
 #        chmod g+rx /etc/dovecot/private -R && \
- RUN       pear install Net_Sieve-1.4.6 
+ RUN       pear install Net_Sieve-1.4.6
         
     
