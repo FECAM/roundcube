@@ -1,9 +1,4 @@
-FROM php:8.1.27-zts-bookworm
-RUN curl -sSL https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions -o - | sh -s \
-      gd xdebug        
-COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-RUN install-php-extensions soap
-    
+#FROM roundcube/roundcubemail:1.6.x-fpm
 FROM roundcube/roundcubemail:1.6.6-apache
 ADD config.docker.fecam.inc.php /usr/src/roundcubemail/config/
 ADD folder_info /usr/src/roundcubemail/plugins/folder_info/
@@ -36,5 +31,7 @@ RUN   wget -O /tmp/go-pear.phar http://pear.php.net/go-pear.phar
 RUN   php /tmp/go-pear.phar 
 #RUN       pear install Net_Sieve-1.4.6
 #RUN       pear install --alldeps horde/Horde_ManageSieve
-
-
+RUN curl -sSL https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions -o - | sh -s \
+      gd xdebug        
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+    
