@@ -8,6 +8,7 @@ ADD ispconfig3_pass /usr/src/roundcubemail/plugins/ispconfig3_pass/
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY logo.svg /usr/src/roundcubemail/skins/elastic/images/logo.svg
 COPY logo.png /usr/src/roundcubemail/skins/elastic/images/favicon.ico
+COPY login.html /usr/src/roundcubemail/skins/elastic/templates/login.html
 
 RUN set -ex; \
     apt-get update; \

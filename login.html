@@ -1,0 +1,78 @@
+<roundcube:include file="includes/layout.html" />
+
+<style>
+    .maintenance-notice {
+        background-color: #FFA500; /* Laranja */
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        margin: 5px auto;
+        padding: 15px;
+        text-align: center;
+        overflow-y: auto;
+        max-height: 80vh;
+    }
+
+    .maintenance-notice h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .maintenance-notice p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+    }
+
+    .maintenance-notice a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .maintenance-notice a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+<h1 class="voice"><roundcube:object name="productname" /> <roundcube:label name="login" /></h1>
+<div id="layout-content" class="selected no-navbar" role="main">
+    <div class="maintenance-notice">
+        <h2>MANUTENÇÃO PROGRAMADA</h2>
+        <p>A manutenção programada está agendada para: 01/11/2023 às 23:59.</p>
+        <a></a>
+    </div>
+    <script>
+        // Switch para ligar/desligar aviso de manutencao
+        const enableMaintenanceNotice = false;
+        if (!enableMaintenanceNotice) {
+            document.querySelector(".maintenance-notice").style.display = "none";
+        }
+    </script>
+
+<div id="layout-content" class="selected no-navbar" role="main">
+	<roundcube:object name="logo" src="/images/logo.svg" data-src-small="0" id="logo" alt="Logo" />
+	<roundcube:form id="login-form" name="login-form" method="post" class="propform">
+	<roundcube:object name="loginform" form="login-form" size="40" submit=true />
+		<div id="login-footer" role="contentinfo">
+			<roundcube:object name="productname" condition="config:display_product_info &gt; 0" />
+			<roundcube:object name="version" condition="config:display_product_info == 2" />
+			<roundcube:if condition="config:support_url" />
+				&nbsp;&bull;&nbsp; <a href="<roundcube:var name='config:support_url' />" target="_blank" class="support-link"><roundcube:label name="support" /></a>
+			<roundcube:endif />
+			<br>
+			<a href="https://www.fecam.org.br/politica-de-privacidade-e-de-uso-do-webmail-da-fecam/" target="_blank">Política de Uso e Privacidade</a>
+			<roundcube:container name="loginfooter" id="login-footer" />
+		</div>
+	</form>
+</div>
+
+<noscript>
+	<p class="noscriptwarning"><roundcube:label name="noscriptwarning" /></p>
+</noscript>
+
+<roundcube:include file="includes/footer.html" />
