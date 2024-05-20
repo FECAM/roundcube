@@ -1,7 +1,7 @@
 <?php
 
 $labels = array();
-$labels['trash_message'] = 'Mensagens na Lixeira por mais de 30 dias poderão ser automaticamente deletadas.';
-$labels['junk_message'] = 'Mensagens da pasta Spam por mais de 30 dias poderão ser automaticamente deletadas.';
+$labels['trash_message'] = 'Itens nesta pasta com + 30 dias serão automaticamente deletados';
+$labels['junk_message'] = 'Itens nesta pasta com + 30 dias serão automaticamente deletados';
 
 ?>
