@@ -1,5 +1,5 @@
 #FROM roundcube/roundcubemail:1.6.x-fpm
-FROM roundcube/roundcubemail:1.6.6-apache
+FROM roundcube/roundcubemail:1.6.8-apache
 ADD config.docker.fecam.inc.php /usr/src/roundcubemail/config/
 ADD folder_info /usr/src/roundcubemail/plugins/folder_info/
 ADD ispconfig3_account /usr/src/roundcubemail/plugins/ispconfig3_account/
