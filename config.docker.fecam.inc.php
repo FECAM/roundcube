@@ -18,7 +18,7 @@
  $config['language'] = 'pt_BR';
  $config['htmleditor'] = 1;
  $config['reply_mode'] = 1;
- 
+ $config['session_lifetime'] = 2880;
  #$config['password_driver'] = 'sql';
  #$config['password_confirm_current'] = true;
  #$config['password_minimum_length'] = 5;
