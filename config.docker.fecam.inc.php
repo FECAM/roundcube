@@ -1,4 +1,5 @@
 <?php
+ $config['enable_spellcheck'] = false;
  #$config['imap_conn_options'] =  array('verify_peer' => false, 'verify_peer_name' => false) ;
  #$config['smtp_conn_options'] =  array('verify_peer' => false, 'verify_peer_name' => false) ;
  $config['imap_conn_options'] = array(
