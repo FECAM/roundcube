@@ -17,6 +17,7 @@
  );
  $config['log_driver'] = 'file';
  $config['log_driver'] = 'stdout';
+ $config['log_logins'] = true;  // Registra logins
  $config['language'] = 'pt_BR';
  $config['htmleditor'] = 1;
  $config['reply_mode'] = 1;
