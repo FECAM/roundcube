@@ -26,7 +26,8 @@ RUN set -ex; \
             johndoh/contextmenu \
     ; \
     rm -rf /var/lib/apt/lists/*
-    
+
+COPY  apache2.conf /etc/apache2/apache2.conf
 RUN   wget -O /tmp/go-pear.phar http://pear.php.net/go-pear.phar
 RUN   php /tmp/go-pear.phar 
 RUN       pear install Net_Sieve-1.4.6
