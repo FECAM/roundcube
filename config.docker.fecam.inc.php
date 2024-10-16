@@ -15,7 +15,8 @@
      'verify_peer_name'  => false
    )
  );
- 
+ $config['log_driver'] = 'file';
+ $config['log_driver'] = 'stdout';
  $config['language'] = 'pt_BR';
  $config['htmleditor'] = 1;
  $config['reply_mode'] = 1;
