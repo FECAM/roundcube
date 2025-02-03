@@ -15,6 +15,7 @@
      'verify_peer_name'  => false
    )
  );
+ $config['max_message_size'] = 70000000;  // ~70MB para garantir 50MB de anexos
  $config['log_driver'] = 'file';
  $config['log_driver'] = 'stdout';
  $config['log_logins'] = true;  // Registra logins
