@@ -23,6 +23,7 @@
  $config['htmleditor'] = 1;
  $config['reply_mode'] = 1;
  $config['session_lifetime'] = 2880;
+ $config['reconnect_imap_max_attempts'] = 3;
  #$config['password_driver'] = 'sql';
  #$config['password_confirm_current'] = true;
  #$config['password_minimum_length'] = 5;
@@ -34,7 +35,7 @@
  #$config['password_dovecotpw_with_method'] = true;
  #$config['password_db_dsn'] = '%ROUNDCUBEMAIL_PASSWORD_DB_DSN';
  #$config['password_query'] = 'UPDATE mailbox SET password=%P WHERE username=%u LIMIT 1'; 
- $config['debug_level'] = 2;
+ $config['debug_level'] = 3;
  $config['sql_debug'] = false;
  $config['product_name'] = 'Fecam Webmail';
  $config['folder_info_messages'] = array(
