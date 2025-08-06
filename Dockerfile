@@ -29,6 +29,7 @@ RUN set -ex; \
 
 COPY  apache2.conf /etc/apache2/apache2.conf
 COPY  mods-available/status.conf /etc/apache2/mods-available/status.conf
+COPY  mods-available/mpm_prefork.conf /etc/apache2/mods-available/mpm_prefork.conf
 RUN   wget -O /tmp/go-pear.phar http://pear.php.net/go-pear.phar
 RUN   php /tmp/go-pear.phar 
 RUN       pear install Net_Sieve-1.4.6
