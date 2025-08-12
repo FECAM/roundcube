@@ -1,4 +1,17 @@
 <?php
+// Sessão do usuário (em minutos)
+//$config['session_lifetime'] = 60;        // ex.: 1h
+
+// IMAP/SMTP: tempo limite de conexão (em segundos)
+ $config['imap_timeout'] = 300;           // 0 usa default_socket_timeout do PHP
+ $config['smtp_timeout'] = 300;           // idem
+
+ // “Keep-alive” e checagem de novos e-mails
+ $config['min_refresh_interval'] = 60;    // mínimo permitido p/ usuários
+ $config['refresh_interval'] = 180;       // checar estado a cada 3 min (0 desativa)
+
+ // Se tiver plugins que buscam conteúdo externo (URL), dê um timeout global:
+ $config['http_client'] = ['timeout' => 10]; // via Guzzle
  $config['enable_spellcheck'] = false;
  #$config['imap_conn_options'] =  array('verify_peer' => false, 'verify_peer_name' => false) ;
  #$config['smtp_conn_options'] =  array('verify_peer' => false, 'verify_peer_name' => false) ;
