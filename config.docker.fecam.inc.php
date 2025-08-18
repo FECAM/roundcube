@@ -7,7 +7,7 @@ $config['imap_timeout'] = 60;   // segundos para operações IMAP
 $config['smtp_timeout'] = 60;   // segundos para operações SMTP
 
 // ===== Sessão (logout por inatividade) =====
-$config['session_lifetime'] = 720 ; // minutos até expirar sessão (cookies)
+$config['session_lifetime'] = 1440 ; // minutos até expirar sessão (cookies)
 $config['session_timeout']  = 720;  // minutos de inatividade antes do logout forçado
 
 // ===== Keep-alive/AJAX =====
@@ -15,7 +15,7 @@ $config['keep_alive'] = 60;         // ping ao servidor para manter sessão/IMAP
 $config['min_refresh_interval'] = 5; // intervalo mínimo entre atualizações automáticas (min)
 
 // (opcional) reduzir custo em caixas enormes
-$config['check_all_folders'] = false;
+$config['check_all_folders'] = true;
 
  // Se tiver plugins que buscam conteúdo externo (URL), dê um timeout global:
  $config['http_client'] = ['timeout' => 10]; // via Guzzle
