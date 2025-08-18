@@ -1,6 +1,5 @@
 <?php
 // Sessão do usuário (em minutos)
-//$config['session_lifetime'] = 60;        // ex.: 1h
 ini_set('max_execution_time', 120);
 
 // ===== Timeouts de rede =====
@@ -8,8 +7,8 @@ $config['imap_timeout'] = 60;   // segundos para operações IMAP
 $config['smtp_timeout'] = 60;   // segundos para operações SMTP
 
 // ===== Sessão (logout por inatividade) =====
-$config['session_lifetime'] = 180; // minutos até expirar sessão (cookies)
-$config['session_timeout']  = 10;  // minutos de inatividade antes do logout forçado
+$config['session_lifetime'] = 720 ; // minutos até expirar sessão (cookies)
+$config['session_timeout']  = 720;  // minutos de inatividade antes do logout forçado
 
 // ===== Keep-alive/AJAX =====
 $config['keep_alive'] = 60;         // ping ao servidor para manter sessão/IMAP vivos
